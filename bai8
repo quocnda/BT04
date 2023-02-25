@@ -1,0 +1,22 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main() {
+  int n;
+  int nam[n+1];
+  int nu[n+1];
+  cin>>n;
+  for(int i=1;i<=n;i++) {
+    cin>>nam[i];
+    cin>>nu[i];
+  }
+  sort(nam+1,nam+n+1);
+  sort(nu+1,nu+n+1);
+  for(int i=1;i<=n;i++) {
+    if(nam[i]<nu[i]) {
+        cout<<"NO";
+        return 0;
+    }
+  }
+  cout<<"YES";
+}
