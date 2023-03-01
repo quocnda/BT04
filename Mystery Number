@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int a[1000];
+    int b[1000];
+    int dema[1001];
+    int demb[1001];
+    for(int i=0;i<1000;i++) {
+        dema[i]=0;
+        demb[i]=0;
+    }
+    for (int i = 1; i <= n; i++) {
+        cin >> a[i];
+        dema[a[i]]++;
+    }
+    for (int i = 1; i <= n + 1; i++) {
+        cin >> b[i];
+        demb[b[i]]++;
+    }
+    for (int i = 1; i < 1001; i++) {
+        if (dema[i] != demb[i]) {
+            cout << i;
+            return 0;
+        }
+    }
+
+}
